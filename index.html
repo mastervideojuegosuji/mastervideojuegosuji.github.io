@@ -43,6 +43,31 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<script>
+    document.getElementById("myVideo").addEventListener("click", function() {
+      var video = document.getElementById("myVideo");
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  </script>
+
+  <style>
+    .video-container {
+      position: relative;
+      width: 30%;
+      border: 2px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .video-container video {
+      width: 100%;
+    }
+  </style>
+
 	</head>
 	<body>
 		
@@ -88,6 +113,14 @@
 			</div>
 		</div>
 	</header>
+
+	<div class="video-container">
+	<video id="myVideo" controls>
+    	<source src="images/promo.mp4" type="video/mp4">
+    	Your browser does not support HTML5 video.
+  	</video>
+  	</div>			
+
 
 	<div class="row copyright">
 				<div class="col-md-12 text-center">
